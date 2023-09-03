@@ -1,0 +1,7 @@
+E:\Learn\C#\IntersecaoVetores\bin\Debug\IntersecaoVetores.exe.config
+E:\Learn\C#\IntersecaoVetores\bin\Debug\IntersecaoVetores.exe
+E:\Learn\C#\IntersecaoVetores\bin\Debug\IntersecaoVetores.pdb
+E:\Learn\C#\IntersecaoVetores\obj\Debug\IntersecaoVetores.csproj.AssemblyReference.cache
+E:\Learn\C#\IntersecaoVetores\obj\Debug\IntersecaoVetores.csproj.CoreCompileInputs.cache
+E:\Learn\C#\IntersecaoVetores\obj\Debug\IntersecaoVetores.exe
+E:\Learn\C#\IntersecaoVetores\obj\Debug\IntersecaoVetores.pdb

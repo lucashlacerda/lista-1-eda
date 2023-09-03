@@ -1,0 +1,7 @@
+E:\Learn\C#\UniaoVetores\bin\Debug\UniaoVetores.exe.config
+E:\Learn\C#\UniaoVetores\bin\Debug\UniaoVetores.exe
+E:\Learn\C#\UniaoVetores\bin\Debug\UniaoVetores.pdb
+E:\Learn\C#\UniaoVetores\obj\Debug\UniaoVetores.csproj.AssemblyReference.cache
+E:\Learn\C#\UniaoVetores\obj\Debug\UniaoVetores.csproj.CoreCompileInputs.cache
+E:\Learn\C#\UniaoVetores\obj\Debug\UniaoVetores.exe
+E:\Learn\C#\UniaoVetores\obj\Debug\UniaoVetores.pdb

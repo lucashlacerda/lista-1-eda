@@ -1,0 +1,7 @@
+E:\Learn\C#\Lista00\bin\Debug\Lista00.exe.config
+E:\Learn\C#\Lista00\bin\Debug\Lista00.exe
+E:\Learn\C#\Lista00\bin\Debug\Lista00.pdb
+E:\Learn\C#\Lista00\obj\Debug\Lista00.csproj.AssemblyReference.cache
+E:\Learn\C#\Lista00\obj\Debug\Lista00.csproj.CoreCompileInputs.cache
+E:\Learn\C#\Lista00\obj\Debug\Lista00.exe
+E:\Learn\C#\Lista00\obj\Debug\Lista00.pdb
