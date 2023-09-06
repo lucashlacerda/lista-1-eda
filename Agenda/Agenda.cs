@@ -46,9 +46,36 @@ namespace Agenda
         public Contato BuscarContatoPorNome(string nome)
         {
             Contato contatoBuscado = new Contato();
+            contatoBuscado == null;
             listaDeContatos.ForEach(c =>
             {
                 if(c.Nome == nome)
+                {
+                    contatoBuscado = c;
+                }
+            });
+            return contatoBuscado;
+        }
+        public Contato BuscarContatoPorEmail(string email)
+        {
+            Contato contatoBuscado = new Contato();
+            contatoBuscado == null;
+            listaDeContatos.ForEach(c =>
+            {
+                if (c.Email == email)
+                {
+                    contatoBuscado = c;
+                }
+            });
+            return contatoBuscado;
+        }
+        public Contato BuscarContatoPorTelefone(int telefone)
+        {
+            Contato contatoBuscado = new Contato();
+            contatoBuscado == null;
+            listaDeContatos.ForEach(c =>
+            {
+                if (c.Telefone == telefone)
                 {
                     contatoBuscado = c;
                 }
