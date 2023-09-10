@@ -16,6 +16,12 @@ namespace Agenda
             Random random = new Random();
             _id = random.Next();
         }
+        public Contato(string nome, string email, long telefone) : this()
+        {
+            this.Email = email;
+            this.Telefone = telefone;
+            this.Nome = nome;
+        }
 
         public int Id { get;  }
         public string Nome { get; set; }

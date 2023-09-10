@@ -1,0 +1,7 @@
+E:\Learn\lista-1-eda\Agenda\obj\Debug\Agenda.csproj.AssemblyReference.cache
+E:\Learn\lista-1-eda\Agenda\obj\Debug\Agenda.csproj.CoreCompileInputs.cache
+E:\Learn\lista-1-eda\Agenda\bin\Debug\Agenda.exe.config
+E:\Learn\lista-1-eda\Agenda\bin\Debug\Agenda.exe
+E:\Learn\lista-1-eda\Agenda\bin\Debug\Agenda.pdb
+E:\Learn\lista-1-eda\Agenda\obj\Debug\Agenda.exe
+E:\Learn\lista-1-eda\Agenda\obj\Debug\Agenda.pdb

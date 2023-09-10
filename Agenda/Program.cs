@@ -10,34 +10,100 @@ namespace Agenda
     {
         static void Main(string[] args)
         {
-            int opcao1;
-            string nome, email;
-            int telefone;
-
-            Agenda agenda = new Agenda();
-            Console.WriteLine("Insira sua necessidade:\n 1. Adicionar contato \n2. Remover contato\n3. Buscar contato por nome" +
-                "4. Buscar contato por email\n5. Buscar contato por telefone");
-            opcao1 = Console.ReadKey();
-
-            switch(opcao1)
+            bool rodando = true;
+            while(rodando)
             {
-                case 3:
+                int opcaoUsuario;
+                string nome, email;
+                int id;
+                long telefone;
+                                
+                Contato contatoBuscado, novoContato;
+
+                Agenda agenda = new Agenda();
+                Console.WriteLine("Insira sua necessidade:\n1. Adicionar contato\n2. Remover contato\n3. Buscar contato por nome\n" +
+                    "4. Buscar contato por email\n5. Buscar contato por telefone\n6. Consultar tamanho da Agenda\n7. Finalizar programa");
+                opcaoUsuario = int.Parse(Console.ReadLine());
+
+                if (opcaoUsuario == 1)
+                {
+                    Console.WriteLine("Para adicionar um contato, preciso de alguns dados.\nInsira o nome do novo contato:");
+                    nome = Console.ReadLine();
+                    Console.WriteLine("Agora insira o telefone (somente os números sem espaços ou caracteres especiais):");
+                    telefone = long.Parse(Console.ReadLine());
+                    Console.WriteLine("Insira o e-mail:");
+                    email = Console.ReadLine();
+
+                    novoContato = new Contato(nome, email, telefone);
+                    agenda.AdicionarContato(novoContato);
+
+                    Console.WriteLine("Contato adicionado com sucesso.");
+
+                }
+                else if (opcaoUsuario == 2)
+                {
+                    Console.WriteLine("Ok, para começarmos, insira o ID do contato à ser excluído:");
+                    try
+                    {
+                        id = int.Parse(Console.ReadLine());
+                        Console.WriteLine(agenda.RemoverContato(id)); 
+                    }catch (Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
+
+                }
+                else if (opcaoUsuario == 3)
+                {
                     Console.WriteLine("Insira o nome a ser buscado:");
                     nome = Console.ReadLine();
-                    agenda.BuscarContatoPorNome(nome);
-                    break;
-                case 4:
+                    contatoBuscado = agenda.BuscarContatoPorNome(nome);
+                    if (contatoBuscado != null)
+                    {
+                        Console.WriteLine("Segue as  informações do seu contato:\nNome: {0}\nTelefone: {1}\nE-mail{2}\nID:{3}", contatoBuscado.Nome, contatoBuscado.Telefone, contatoBuscado.Email, contatoBuscado.Id);
+                    }
+                    else
+                        Console.WriteLine("Não foi possível encontrar o contato solicitado");
+                }
+                else if (opcaoUsuario == 4)
+                {
                     Console.WriteLine("Insira o email a ser buscado:");
                     email = Console.ReadLine();
-                    agenda.BuscarContatoPorEmail(email);
-                    break;
-                case 5:
+                    contatoBuscado = agenda.BuscarContatoPorEmail(email);
+                    if (contatoBuscado != null)
+                    {
+                        Console.WriteLine("Segue as  informações do seu contato:\nNome: {0}\nTelefone: {1}\nE-mail{2}\nID:{3}", contatoBuscado.Nome, contatoBuscado.Telefone, contatoBuscado.Email, contatoBuscado.Id);
+                    }
+                    else
+                        Console.WriteLine("Não foi possível encontrar o contato solicitado");
+                }
+                else if (opcaoUsuario == 5)
+                {
                     Console.WriteLine("Insira o telefone a ser buscado:");
-                    telefone = int.Parse(Console.ReadLine());
-                    agenda.BuscarContatoPorTelefone(telefone);
-                    break;
-
+                    telefone = long.Parse(Console.ReadLine());
+                    contatoBuscado = agenda.BuscarContatoPorTelefone(telefone);
+                    if (contatoBuscado != null)
+                    {
+                        Console.WriteLine("Segue as  informações do seu contato:\nNome: {0}\nTelefone: {1}\nE-mail{2}\nID:{3}", contatoBuscado.Nome, contatoBuscado.Telefone, contatoBuscado.Email, contatoBuscado.Id);
+                    }
+                    else
+                        Console.WriteLine("Não foi possível encontrar o contato solicitado");
+                }
+                else if (opcaoUsuario == 6)
+                {
+                    Console.WriteLine("A quantidade de contatos atual é {0}.", agenda.QtdContatos);
+                }
+                else if (opcaoUsuario == 7)
+                {
+                    rodando = false;
+                }
+                else
+                {
+                    Console.WriteLine("A opção não é valida!");
+                }
+                Console.ReadLine();
             }
+            
         }
     }
 }

@@ -15,20 +15,19 @@ namespace Agenda
             listaDeContatos = new List<Contato>();
         }
         public int QtdContatos { get; set; }
-
         public void AdicionarContato(Contato contato)
         {
             listaDeContatos.Add(contato);
             QtdContatos++;
         }
 
-        public string RemoverContato(Contato contato)
+        public string RemoverContato(int id)
         {
             bool aux = false;
 
             listaDeContatos.ForEach(c =>
             {
-                if (c.Id == contato.Id)
+                if (c.Id == id)
                 {
                     aux = true;
                     listaDeContatos.Remove(c);
@@ -45,8 +44,7 @@ namespace Agenda
 
         public Contato BuscarContatoPorNome(string nome)
         {
-            Contato contatoBuscado = new Contato();
-            contatoBuscado == null;
+            Contato contatoBuscado = null;
             listaDeContatos.ForEach(c =>
             {
                 if(c.Nome == nome)
@@ -58,8 +56,7 @@ namespace Agenda
         }
         public Contato BuscarContatoPorEmail(string email)
         {
-            Contato contatoBuscado = new Contato();
-            contatoBuscado == null;
+            Contato contatoBuscado = null;
             listaDeContatos.ForEach(c =>
             {
                 if (c.Email == email)
@@ -69,10 +66,9 @@ namespace Agenda
             });
             return contatoBuscado;
         }
-        public Contato BuscarContatoPorTelefone(int telefone)
+        public Contato BuscarContatoPorTelefone(long telefone)
         {
-            Contato contatoBuscado = new Contato();
-            contatoBuscado == null;
+            Contato contatoBuscado = null;
             listaDeContatos.ForEach(c =>
             {
                 if (c.Telefone == telefone)
