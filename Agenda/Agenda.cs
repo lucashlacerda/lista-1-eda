@@ -47,7 +47,7 @@ namespace Agenda
             Contato contatoBuscado = null;
             listaDeContatos.ForEach(c =>
             {
-                if(c.Nome == nome)
+                if(c.Nome.Equals(nome))
                 {
                     contatoBuscado = c;
                 }
@@ -59,7 +59,7 @@ namespace Agenda
             Contato contatoBuscado = null;
             listaDeContatos.ForEach(c =>
             {
-                if (c.Email == email)
+                if (c.Email.Equals(email))
                 {
                     contatoBuscado = c;
                 }

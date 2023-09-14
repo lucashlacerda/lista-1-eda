@@ -11,6 +11,7 @@ namespace Agenda
         static void Main(string[] args)
         {
             bool rodando = true;
+            Agenda agenda = new Agenda();
             while(rodando)
             {
                 int opcaoUsuario;
@@ -20,7 +21,6 @@ namespace Agenda
                                 
                 Contato contatoBuscado, novoContato;
 
-                Agenda agenda = new Agenda();
                 Console.WriteLine("Insira sua necessidade:\n1. Adicionar contato\n2. Remover contato\n3. Buscar contato por nome\n" +
                     "4. Buscar contato por email\n5. Buscar contato por telefone\n6. Consultar tamanho da Agenda\n7. Finalizar programa");
                 opcaoUsuario = int.Parse(Console.ReadLine());
